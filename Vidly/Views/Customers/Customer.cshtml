@@ -1,0 +1,32 @@
+﻿@using Vidly.Models
+@model IEnumerable<Vidly.Models.Customers>
+
+
+@*in line style *@
+
+@*end inline style*@
+<h2>Customers</h2>
+@if (Model.ToList().Count ==0)
+{
+    <text>there is No customer here</text>
+}
+else
+{
+    <table class="table border">
+        <thead>
+        <tr>
+             <th class="font-weight-bold">customer</th>
+             <th class="font-weight-bold">Discount Rate</th>
+        </tr>
+        </thead>
+        <tbody >
+            @foreach (var customer in Model.ToList())
+            {
+                <tr>
+                    <td >@Html.ActionLink(@customer.name,"Details",new {id= customer.id},null)</td>
+                    <td >@customer.MembershipType.DiscountRate%</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
