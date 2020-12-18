@@ -24,12 +24,19 @@
 else
 {
     <table class="table border">
-        <thead ><tr> <td class="font-weight-bold">Movies</td></tr> </thead>
+        <thead >
+
+        <tr>
+            <td class="font-weight-bold">Movie</td>
+            <td class="font-weight-bold">Genre</td>
+        </tr>
+        </thead>
         <tbody >
         @foreach (var movie in Model.ToList())
         {
             <tr>
                 <td >@Html.ActionLink(@movie.Name,"Details",new {id= movie.Id},null)</td>
+                <td >@movie.Genres.name</td>
             </tr>
         }
         </tbody>

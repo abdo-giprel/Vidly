@@ -13,6 +13,7 @@ namespace Vidly.Models
         [Required]
         [StringLength(255,ErrorMessage = "Name is more than 255 characters")]
         public string name { get; set; }
+        public DateTime? BirthDate { get; set; }
         public bool IsSubscribedToNewsLatter { get; set; }
         public MembershipType MembershipType { get; set; }
         public byte MembershipTypeId { get; set; }

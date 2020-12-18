@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.WebSockets;
 using Vidly.Models;
+using System.Data.Entity;
 using Vidly.ViewModels;
 
 namespace Vidly.Controllers
@@ -12,28 +13,36 @@ namespace Vidly.Controllers
     [System.Runtime.InteropServices.Guid("C92DF1DB-CEE8-4D2B-BCDB-C99D6DD91E31")]
     public class MoviesController : Controller
     {
-        List<Movies> movie = new List<Movies>()
+        private ApplicationDbContext _context;
+
+        public MoviesController()
         {
-            new Movies { Id=0,Name = "hello world"},
-            new Movies { Id=1,Name = "next day"}
-        };
+            _context=new ApplicationDbContext();
+            
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Movies/Random
         [Route("Movies")]
         public ActionResult Random()
-        { 
-            return View(movie);
+        {
+            var movies = _context.Movies.Include(m => m.Genres).ToList();
+            return View(movies);
         }
 
         [Route("Movies/datails/{id?}")]
         public ActionResult Details(int id)
         {
-            if (id >=movie.ToList().Count )
+            var movie = _context.Movies.Include(m => m.Genres).SingleOrDefault(m => m.Id == id);
+            if (movie == null)
             {
                 return HttpNotFound();
             }
-
-            var movieID = movie[id];
-            return View(movieID);
+            return View(movie);
         }
         
     }

@@ -228,9 +228,54 @@
     <Compile Include="Migrations\202012171833436_AddAnnotationsToCustomer.designer.cs">
       <DependentUpon>202012171833436_AddAnnotationsToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012171919150_addNameFildtoMembershipTypeModel.cs" />
+    <Compile Include="Migrations\202012171919150_addNameFildtoMembershipTypeModel.designer.cs">
+      <DependentUpon>202012171919150_addNameFildtoMembershipTypeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012171921230_updateRecordInMembershipTpyes.cs" />
+    <Compile Include="Migrations\202012171921230_updateRecordInMembershipTpyes.designer.cs">
+      <DependentUpon>202012171921230_updateRecordInMembershipTpyes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012171951389_updateRecordInMembershipTpyes1.cs" />
+    <Compile Include="Migrations\202012171951389_updateRecordInMembershipTpyes1.designer.cs">
+      <DependentUpon>202012171951389_updateRecordInMembershipTpyes1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012181324446_updateRecordInMembershipTpyes11.cs" />
+    <Compile Include="Migrations\202012181324446_updateRecordInMembershipTpyes11.designer.cs">
+      <DependentUpon>202012181324446_updateRecordInMembershipTpyes11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012181335342_addBithDateToCustomer.cs" />
+    <Compile Include="Migrations\202012181335342_addBithDateToCustomer.designer.cs">
+      <DependentUpon>202012181335342_addBithDateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012181355380_letBirthdateInCustomerNull.cs" />
+    <Compile Include="Migrations\202012181355380_letBirthdateInCustomerNull.designer.cs">
+      <DependentUpon>202012181355380_letBirthdateInCustomerNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012182018343_addMovieModelToDatabase.cs" />
+    <Compile Include="Migrations\202012182018343_addMovieModelToDatabase.designer.cs">
+      <DependentUpon>202012182018343_addMovieModelToDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012182024256_addGenreTomodels.cs" />
+    <Compile Include="Migrations\202012182024256_addGenreTomodels.designer.cs">
+      <DependentUpon>202012182024256_addGenreTomodels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012182036410_editMovieModel.cs" />
+    <Compile Include="Migrations\202012182036410_editMovieModel.designer.cs">
+      <DependentUpon>202012182036410_editMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012182038328_setSomeValueInGenres.cs" />
+    <Compile Include="Migrations\202012182038328_setSomeValueInGenres.designer.cs">
+      <DependentUpon>202012182038328_setSomeValueInGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012182048226_addDataAddedFildToMovieModel.cs" />
+    <Compile Include="Migrations\202012182048226_addDataAddedFildToMovieModel.designer.cs">
+      <DependentUpon>202012182048226_addDataAddedFildToMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Genres.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -332,6 +377,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012171833436_AddAnnotationsToCustomer.resx">
       <DependentUpon>202012171833436_AddAnnotationsToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012171919150_addNameFildtoMembershipTypeModel.resx">
+      <DependentUpon>202012171919150_addNameFildtoMembershipTypeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012171921230_updateRecordInMembershipTpyes.resx">
+      <DependentUpon>202012171921230_updateRecordInMembershipTpyes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012171951389_updateRecordInMembershipTpyes1.resx">
+      <DependentUpon>202012171951389_updateRecordInMembershipTpyes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012181324446_updateRecordInMembershipTpyes11.resx">
+      <DependentUpon>202012181324446_updateRecordInMembershipTpyes11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012181335342_addBithDateToCustomer.resx">
+      <DependentUpon>202012181335342_addBithDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012181355380_letBirthdateInCustomerNull.resx">
+      <DependentUpon>202012181355380_letBirthdateInCustomerNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012182018343_addMovieModelToDatabase.resx">
+      <DependentUpon>202012182018343_addMovieModelToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012182024256_addGenreTomodels.resx">
+      <DependentUpon>202012182024256_addGenreTomodels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012182036410_editMovieModel.resx">
+      <DependentUpon>202012182036410_editMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012182038328_setSomeValueInGenres.resx">
+      <DependentUpon>202012182038328_setSomeValueInGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012182048226_addDataAddedFildToMovieModel.resx">
+      <DependentUpon>202012182048226_addDataAddedFildToMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
