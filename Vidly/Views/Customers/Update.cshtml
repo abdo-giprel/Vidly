@@ -1,0 +1,37 @@
+﻿@model Vidly.ViewModels.CustomerwithMembershipViewModels
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Update Customer (@Model.Customer.name)</h2>
+@using (Html.BeginForm("Update", "Customers"))
+{
+    <div>
+        @Html.LabelFor(c => c.Customer.name)
+        @Html.TextBoxFor(c => c.Customer.name, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(c => c.Customer.BirthDate)
+        @if(Model.Customer.BirthDate.HasValue)
+        {
+            @Html.TextBoxFor(c => c.Customer.BirthDate,"{0:d MMM yyyy}",new {@class="form-control"});
+            <h6>@Model.Customer.BirthDate</h6>
+        }
+        else{
+            <input type="date" class="form-control" id="BirthDate" name="birthDate" />
+            <h6>@Model.Customer.BirthDate</h6>
+        }
+
+    </div>
+    <div>
+        @Html.CheckBoxFor(c => c.Customer.IsSubscribedToNewsLatter) Is Subscriped To News Latter?
+    </div>
+    <div>
+        @Html.LabelFor(c => c.Customer.MembershipTypeId)
+        @Html.DropDownListFor(c => c.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "id", "name"), "Select Membership Type", new { @class = "form-control" })
+    </div>
+    <br />
+    @Html.HiddenFor(c=>c.Customer.id)
+    <input type="submit" class="btn btn-primary" value="Save" />
+}
